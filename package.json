@@ -1,0 +1,11 @@
+{
+  "name": "atlas",
+  "version": "1.0.0",
+  "description": "Atlas geo",
+  "main": "index.js",
+  "scripts": {
+    "test": "start"
+  },
+  "author": "Gabriel Ribeiro",
+  "license": "ISC"
+}
