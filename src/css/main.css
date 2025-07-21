@@ -1,0 +1,40 @@
+body {
+  background-color: #02416d;
+}
+
+header {
+  background-color: transparent;
+  width: 100%;
+  height: 5em;
+  border-bottom: 3px solid #0a5483;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+P {
+  color: #f8f8ec;
+  font-size: 32px;
+  margin: 0;
+}
+
+#textCountry {
+  height: 32px;
+  border-radius: 3px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid #f8f8ec;
+}
+
+#textCountry::placeholder {
+  color: #f8f8ec;
+}
+
+.iconSearch {
+  color: #f8f8ec;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=main.css.map */
