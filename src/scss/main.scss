@@ -13,12 +13,16 @@ header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0px 5px;
 }
 P{
     color: $white;
     font-size: 32px;
     margin: 0;
+}
+
+.txtHero{
+    color: $white;
 }
 #textCountry{
     height: 32px;
@@ -35,4 +39,35 @@ P{
     color: $white;
     font-size: 24px;
     cursor: pointer;
+}
+
+.hero{
+    height: 250px;
+    width: 100%;
+    background-image: url('/public/img/atlas2.jpg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 4px;
+}
+
+.btnRegions{
+    background-color:#0a5583;
+	border-radius:20px;
+	border:3px solid #aedd2b;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:10px 20px;
+	text-decoration:none;
+    height: auto;
+    
+    &:hover{
+        background-color: $green;
+        transition: 0.4s ease;
+    }
 }
