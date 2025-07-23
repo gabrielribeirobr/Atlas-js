@@ -71,3 +71,63 @@ P{
         transition: 0.4s ease;
     }
 }
+.aboutContinent{
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.southAmerica{
+    background-image: url('/public/img/continents/america do sul.png');
+    background-size:cover;
+    background-position-x: -20px;
+    width: 100%;
+    height: 350px;
+   
+}
+
+.continent-card {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: right center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  color: $white;
+
+  .about-continent {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.1); // Para melhorar legibilidade
+    padding: 0.5rem;
+    border-radius: 8px;
+  }
+
+  .btnRegions {
+    align-self: flex-start;
+  }
+}
+
+// Imagens específicas para cada continente
+.south-america {
+  background-image: url('/public/img/continents/america-do-sul.PNG');
+}
+.europe {
+  background-image: url('/public/img/continents/europe.PNG');
+}
+.africa {
+  background-image: url('/public/img/continents/africa.PNG');
+}
+.asia {
+  background-image: url('/public/img/continents/asia.PNG');
+}
+.oceania {
+  background-image: url('/public/img/continents/oceania.PNG');
+}
+.north-america {
+  background-image: url('/public/img/continents/north-america.PNG');
+}

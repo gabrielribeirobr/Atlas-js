@@ -10,13 +10,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0px 20px;
+  padding: 0px 5px;
 }
 
 P {
   color: #f8f8ec;
   font-size: 32px;
   margin: 0;
+}
+
+.txtHero {
+  color: #f8f8ec;
 }
 
 #textCountry {
@@ -35,6 +39,98 @@ P {
   color: #f8f8ec;
   font-size: 24px;
   cursor: pointer;
+}
+
+.hero {
+  height: 250px;
+  width: 100%;
+  background-image: url("/public/img/atlas2.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 4px;
+}
+
+.btnRegions {
+  background-color: #0a5583;
+  border-radius: 20px;
+  border: 3px solid #aedd2b;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 10px 20px;
+  text-decoration: none;
+  height: auto;
+}
+.btnRegions:hover {
+  background-color: #aedd2b;
+  transition: 0.4s ease;
+}
+
+.aboutContinent {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.southAmerica {
+  background-image: url("/public/img/continents/america do sul.png");
+  background-size: cover;
+  background-position-x: -20px;
+  width: 100%;
+  height: 350px;
+}
+
+.continent-card {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-position: right center;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  color: #f8f8ec;
+}
+.continent-card .about-continent {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 0.5rem;
+  border-radius: 8px;
+}
+.continent-card .btnRegions {
+  align-self: flex-start;
+}
+
+.south-america {
+  background-image: url("/public/img/continents/america-do-sul.PNG");
+}
+
+.europe {
+  background-image: url("/public/img/continents/europe.PNG");
+}
+
+.africa {
+  background-image: url("/public/img/continents/africa.PNG");
+}
+
+.asia {
+  background-image: url("/public/img/continents/asia.PNG");
+}
+
+.oceania {
+  background-image: url("/public/img/continents/oceania.PNG");
+}
+
+.north-america {
+  background-image: url("/public/img/continents/north-america.PNG");
 }
 
 /*# sourceMappingURL=main.css.map */
