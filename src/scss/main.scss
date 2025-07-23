@@ -1,120 +1,82 @@
 @import "./variables";
 
-
-body{
-    background-color: $background;
+body {
+  background-color: $background;
 }
 
-header{
-    background-color: transparent;
-    width: 100%;
-    height: 5em;
-    border-bottom: 3px solid $secondary;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0px 5px;
-}
-P{
-    color: $white;
-    font-size: 32px;
-    margin: 0;
-}
-
-.txtHero{
-    color: $white;
-}
-#textCountry{
-    height: 32px;
-    border-radius: 3px;
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid $white;
-    
-}
-#textCountry::placeholder{
-    color: $white;
-}
-.iconSearch{
-    color: $white;
-    font-size: 24px;
-    cursor: pointer;
-}
-
-.hero{
-    height: 250px;
-    width: 100%;
-    background-image: url('/public/img/atlas2.jpg');
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-between;
-    padding-top: 4px;
-}
-
-.btnRegions{
-    background-color:#0a5583;
-	border-radius:20px;
-	border:3px solid #aedd2b;
-	display:inline-block;
-	cursor:pointer;
-	color:#ffffff;
-	font-family:Arial;
-	font-size:17px;
-	padding:10px 20px;
-	text-decoration:none;
-    height: auto;
-    
-    &:hover{
-        background-color: $green;
-        transition: 0.4s ease;
-    }
-}
-.aboutContinent{
-    font-size: 20px;
-    display: flex;
-    flex-direction: column;
-}
-
-.southAmerica{
-    background-image: url('/public/img/continents/america do sul.png');
-    background-size:cover;
-    background-position-x: -20px;
-    width: 100%;
-    height: 350px;
-   
-}
-
-.continent-card {
+header {
+  background-color: transparent;
   width: 100%;
-  height: auto;
-  background-size: cover;
-  background-position: right center;
-  padding: 1rem;
+  height: 5em;
+  border-bottom: 3px solid $secondary;
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 5px;
+}
+P {
+  color: $white;
+  font-size: 32px;
+  margin: 0;
+}
+
+#textCountry {
+  height: 32px;
+  border-radius: 3px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 2px solid $white;
+}
+#textCountry::placeholder {
+  color: $white;
+}
+.iconSearch {
+  color: $white;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.hero {
+  height: 250px;
+  width: 100%;
+  background-image: url("/public/img/atlas2.jpg");
+  background-size: 100%;
+  background-position: 2px;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 1rem;
-  border-radius: 12px;
-  color: $white;
+  padding-top: 4px;
 
-  .about-continent {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    background-color: rgba(0, 0, 0, 0.1); // Para melhorar legibilidade
-    padding: 0.5rem;
-    border-radius: 8px;
-  }
-
-  .btnRegions {
-    align-self: flex-start;
+  .txtHero {
+    color: $white;
   }
 }
 
-// Imagens específicas para cada continente
+.btnRegions {
+  background-color: #0a5583;
+  border-radius: 20px;
+  border: 3px solid #aedd2b;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 17px;
+  padding: 10px 20px;
+  text-decoration: none;
+  height: auto;
+
+  &:hover {
+    background-color: $green;
+    transition: 0.4s ease;
+  }
+}
 .south-america {
   background-image: url('/public/img/continents/america-do-sul.PNG');
+}
+.north-america {
+  background-image: url('/public/img/continents/north-america.PNG');
 }
 .europe {
   background-image: url('/public/img/continents/europe.PNG');
@@ -128,6 +90,63 @@ P{
 .oceania {
   background-image: url('/public/img/continents/oceania.PNG');
 }
-.north-america {
-  background-image: url('/public/img/continents/north-america.PNG');
+.continent-card {
+  width: 100%;
+  height: auto;
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  border-radius: 12px;
+  color: $white;
+  position: relative;
+
+  .about-continent {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0.8rem;
+    border-radius: 8px;
+    z-index: 2;
+  }
+
+  .btnRegions {
+    align-self: flex-start;
+    z-index: 2;
+  }
+
+  // Um overlay escuro opcional pra melhorar o contraste
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.2); // Sutil escurecimento
+    border-radius: 12px;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .continent-card {
+    flex-direction: row;
+    align-items: center;
+    min-height: 280px;
+    padding: 2rem;
+    background-size: 40%; // Visibilidade da silhueta
+    background-position: center right;
+
+    .about-continent {
+      width: 50%;
+      font-size: 1.1rem;
+      margin-bottom: 0;
+    }
+
+    .btnRegions {
+      margin-top: 1rem;
+    }
+  }
 }
