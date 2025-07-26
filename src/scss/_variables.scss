@@ -5,11 +5,11 @@ $secondary:  #0a5483 ;
 $background:  #02416d ;
 
 $continents-images: (
-  "americas":       "/public/img/continents/america.PNG",
-  "europe":        "/public/img/continents/europe.PNG",
-  "africa":        "/public/img/continents/africa.PNG",
-  "asia":          "/public/img/continents/asia.PNG",
-  "oceania":       "/public/img/continents/oceania.PNG"
+  "americas":      "../../public/img/continents/america.PNG",
+  "europe":        "../../public/img/continents/europe.PNG",
+  "africa":        "../../public/img/continents/africa.PNG",
+  "asia":          "../../public/img/continents/asia.PNG",
+  "oceania":       "../../public/img/continents/oceania.PNG"
 );
 
 @mixin continent-backgrounds($map) {
