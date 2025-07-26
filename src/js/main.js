@@ -7,9 +7,9 @@ const continents = [
   },
   {
     name: "americas",
-    image: "/public/img/continents/america-do-sul.PNG",
+    image: "/public/img/continents/america.PNG",
     description:
-      "A América do Sul é um continente localizado principalmente no hemisfério sul, conhecido por sua grande diversidade cultural, climática e natural. Sua principal característica é a vasta biodiversidade, concentrada especialmente na Floresta Amazônica.",
+      "A América é um vasto continente dividido em três partes: América do Norte, Central e do Sul. É marcada por grande diversidade geográfica, cultural e econômica, abrigando florestas tropicais, desertos, cordilheiras e grandes centros urbanos. Da herança indígena aos impactos da colonização europeia, a América é um continente de contrastes e riqueza natural.",
   },
   {
     name: "asia",
@@ -37,10 +37,12 @@ continents.forEach((continent) => {
   const card = document.createElement("div");
   card.className += `continent-card ${continent.name}`;
   card.innerHTML = `
+    <div>
     <h2>${continent.name}</h2>
     <p class="about-continent">${continent.description}</p>
-    <button class="btnRegions" onclick="btnExplore('${continent.name}')">Explorar</button>
-  `;
+    </div>
+    <button class="btnRegions" onclick="btnExplore('${continent.name}')">Explorar</button>   
+    `;
   
   container.appendChild(card);
 });
