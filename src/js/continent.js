@@ -6,9 +6,9 @@ fetch("https://restcountries.com/v3.1/region/" + continent)
   .then((data) => {
     data.forEach((country) => {
       const card = document.createElement("div");
-      card.className = "card";
+      card.className = "card-country";
       card.innerHTML = `
-        <img src="${country.flags.svg}" alt="${country.name.common}" />
+        <img src="${country.flags.svg}" class="img-card" alt="${country.name.common}" />
         <h2>${country.name.common}</h2>
       `;
       card.onclick = () => {
