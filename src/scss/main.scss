@@ -2,6 +2,10 @@
 
 @include continent-backgrounds($continents-images);
 
+*{
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 body {
   background-color: $background;
 }
@@ -121,21 +125,34 @@ header {
 .card-country {
   background-color: $primary;
   display: flex;
+  width: 100%;
+  height: 200px;
   flex-direction: column;
   border-radius: 4px;
-  padding: 0px;
+  border: 3px solid transparent;
 
   &:hover{
-    border: 1px solid $green;
+    border-color: $green;
   }
 
   .img-card {
     width: 100%;
-    height: 200px;
-    object-fit: contain;
+    max-width: 202px;
+    height: 100px;
+    object-fit:cover;
     display: block;
   }
+  .teste2{
+  overflow: hidden;
+   text-overflow: ellipsis;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+           line-clamp: 3; 
+   -webkit-box-orient: vertical;
+   color: $white;
+  }
 }
+
 
 
 @media screen and (min-width: 768px) {
