@@ -31,7 +31,9 @@ const continents = [
   },
 ];
 
+const inputName = document.getElementById("textCountry");
 const container = document.querySelector(".filters-section");
+const iconSearch = document.querySelector(".iconSearch")
 
 continents.forEach((continent) => {
   const card = document.createElement("div");
@@ -51,3 +53,19 @@ function btnExplore(continentName) {
     localStorage.setItem("selectedContinent", continentName.toLowerCase());
     window.location.href = "continent.html";
 };
+
+const continent = localStorage.getItem("selectedContinent");
+
+async function getCountry(name) {
+  const response = await fetch (`https://restcountries.com/v3.1/name/${name}`)
+  const data = await response.json();
+  console.log(data);
+
+  localStorage.setItem('selectedCountry', data[0].cca3);
+  window.location.href = "country.html";
+}
+
+
+iconSearch.addEventListener("click", () =>{
+  getCountry(`${inputName.value}`);
+})
