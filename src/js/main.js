@@ -65,7 +65,6 @@ async function getCountry(name) {
   window.location.href = "country.html";
 }
 
-
 iconSearch.addEventListener("click", () =>{
   getCountry(`${inputName.value}`);
 })
