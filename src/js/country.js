@@ -9,12 +9,20 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
     const country = data[0];
     container.innerHTML = `
       <div class="card">
+        <div class="card-flag">
         <img src="${country.flags.svg}" alt="${country.name.common}" />
+        </div>
         <h2>${country.name.common}</h2>
-        <p><strong>Capital:</strong> ${country.capital?.[0] || 'N/A'}</p>
-        <p><strong>Population:</strong> ${country.population.toLocaleString()}</p>
-        <p><strong>Region:</strong> ${country.region}</p>
-        <p><strong>Languages:</strong> ${Object.values(country.languages || {}).join(', ')}</p>
+        <p><strong>Capital:</strong> ${country.capital?.[0] || 'Não possui'}</p>
+        <p><strong>População:</strong> ${country.population.toLocaleString()}</p>
+        <p><strong>Região:</strong> ${country.region}</p>
+        <p><strong>Idioma:</strong> ${Object.values(country.languages || {}).join(', ')}</p>
+        <p><strong>Lado da direção do carro:</strong> ${country.car.side == 'right' ? 'Direito' : 'Esquerdo'}</p>
+        <p><strong>Independente:</strong> ${country.independent? 'Sim' : 'Não'}</p>
+        <p><strong>Fusos horários:</strong> ${country.timezones}</p>
+        <div class="flag-coatOfArms">
+        <p><strong>Brasão: <img src="${country.coatOfArms.png || 'Não informado' }" alt="coatOfArms" /></strong></p>
+        </div>
       </div>
       <h3>Fronteiras</h3>
       <div class="borders"></div>
