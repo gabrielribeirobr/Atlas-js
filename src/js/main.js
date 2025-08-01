@@ -60,9 +60,9 @@ async function getCountry(name) {
   const response = await fetch (`https://restcountries.com/v3.1/name/${name}`)
   const data = await response.json();
   console.log(data);
-
   localStorage.setItem('selectedCountry', data[0].cca3);
   window.location.href = "country.html";
+
 }
 
 iconSearch.addEventListener("click", () =>{
