@@ -38,36 +38,53 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
 </p>
         </div>
       </div>
-      <h3>Fronteiras</h3>
-      <div class="borders"></div>
-      <h3>Sugestões</h3>
-      <div class="suggestions"></div>
+      
+      <div class="borders">
+      <h2>Fronteiras</h2>
+      </div>
+      
+      <div class="suggestions">
+      <h2>Conheça também:</h2>
+      </div>
     `;
 
     if (country.borders?.length) {
-      fetch(
-        `https://restcountries.com/v3.1/alpha?codes=${country.borders.join(
-          ","
-        )}`
-      )
-        .then((res) => res.json())
-        .then((borders) => {
-          const borderContainer = document.querySelector(".borders");
-          borders.forEach((border) => {
-            const div = document.createElement("div");
-            div.className = "card";
-            div.innerHTML = `<img src="${border.flags.svg}" alt="${border.name.common}" /><h2>${border.name.common}</h2>`;
-            div.onclick = () => {
-              localStorage.setItem("selectedCountry", border.cca3);
-              location.reload();
-            };
-            borderContainer.appendChild(div);
-          });
-        });
-    }
+  fetch(
+    `https://restcountries.com/v3.1/alpha?codes=${country.borders.join(",")}`
+  )
+    .then((res) => res.json())
+    .then((borders) => {
+      const borderContainer = document.querySelector(".borders");
 
-    // Sugestões aleatórias
-    fetch("https://restcountries.com/v3.1/region/europe")
+      if (borders.length === 0) {
+        borderContainer.textContent = "Não possui fronteiras";
+        return;
+      }
+
+      borders.forEach((border) => {
+        const div = document.createElement("div");
+        div.className = "card";
+        div.innerHTML = `
+        <h3>${border.name.common}</h3>
+          <img src="${border.flags.svg}" alt="${border.name.common}" />
+          
+        `;
+        div.onclick = () => {
+          localStorage.setItem("selectedCountry", border.cca3);
+          location.reload();
+        };
+        borderContainer.appendChild(div);
+      });
+    })
+    .catch((err) => {
+      console.error("Erro ao buscar países vizinhos:", err);
+      document.querySelector(".borders").textContent = "Erro ao carregar fronteiras.";
+    });
+} else {
+  document.querySelector(".borders").textContent = "Não possui fronteiras";
+}
+
+    fetch("https://restcountries.com/v3.1/all?fields=name,flags,region")
       .then((res) => res.json())
       .then((all) => {
         const suggestions = document.querySelector(".suggestions");
@@ -75,7 +92,9 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
         random.forEach((s) => {
           const div = document.createElement("div");
           div.className = "card";
-          div.innerHTML = `<img src="${s.flags.svg}" alt="${s.name.common}" /><h2>${s.name.common}</h2>`;
+          div.innerHTML = `
+          <h3>${s.name.common}</h3>
+          <img src="${s.flags.svg}" alt="${s.name.common}" />`;
           div.onclick = () => {
             localStorage.setItem("selectedCountry", s.cca3);
             location.reload();
