@@ -2,8 +2,8 @@
 
 @include continent-backgrounds($continents-images);
 
-*{
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+* {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: $white;
 }
 
@@ -19,7 +19,6 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 5px;
-  
 
   p {
     color: $white;
@@ -61,7 +60,7 @@ header {
   }
 }
 
-.continent-card { 
+.continent-card {
   width: 100%;
   background-repeat: no-repeat;
   background-position: center;
@@ -83,7 +82,6 @@ header {
     position: relative;
     z-index: 2;
   }
-
 
   .btnRegions {
     background-color: #0a5583;
@@ -107,7 +105,7 @@ header {
   }
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
     background-color: rgba(0, 0, 0, 0.2);
@@ -132,7 +130,7 @@ header {
   border-radius: 4px;
   border: 3px solid transparent;
 
-  &:hover{
+  &:hover {
     border-color: $green;
   }
 
@@ -140,39 +138,29 @@ header {
     width: 100%;
     max-width: 202px;
     height: 100px;
-    object-fit:cover;
+    object-fit: cover;
     display: block;
   }
-  .teste2{
-  overflow: hidden;
-   text-overflow: ellipsis;
-   display: -webkit-box;
-   -webkit-line-clamp: 2;
-           line-clamp: 3; 
-   -webkit-box-orient: vertical;
-   color: $white;
+  .teste2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    color: $white;
   }
 }
 
-.card-flag{
-    object-fit: cover;
-    
+img {
+  object-fit: cover;
+  width: 100%;
+}
 
-    img{
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-
-  .country-infos{
-    
-    img{
-      object-fit: cover;
-      width: 100%;
-    }
-  }
-
-
+h2 {
+  border-bottom: 3px solid $secondary;
+  padding-bottom: 10px;
+}
 
 @media screen and (min-width: 768px) {
   .continent-card {

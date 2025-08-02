@@ -159,17 +159,14 @@ header p {
   color: #f8f8ec;
 }
 
-.card-flag {
-  object-fit: cover;
-}
-.card-flag img {
+img {
   object-fit: cover;
   width: 100%;
 }
 
-.country-infos img {
-  object-fit: cover;
-  width: 100%;
+h2 {
+  border-bottom: 3px solid #0a5483;
+  padding-bottom: 10px;
 }
 
 @media screen and (min-width: 768px) {
