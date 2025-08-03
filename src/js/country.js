@@ -22,7 +22,7 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
           country.languages || {}
         ).join(", ")}</p>
         <p><strong>Lado da direção do carro:</strong> ${
-          country.car.side == "right" ? "Direito" : "Esquerdo"
+          country.car.side == "right" ? "Esquerdo" : "Direito"
         }</p>
         <p><strong>Independente:</strong> ${
           country.independent ? "Sim" : "Não"
