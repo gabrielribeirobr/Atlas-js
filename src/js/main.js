@@ -40,7 +40,7 @@ continents.forEach((continent) => {
   card.className += `continent-card ${continent.name}`;
   card.innerHTML = `
     <div>
-    <h2>${continent.name}</h2>
+    <h3>${continent.name}</h2>
     <p class="about-continent">${continent.description}</p>
     </div>
     <button class="btnRegions" onclick="btnExplore('${continent.name}')">Explorar</button>   
@@ -57,11 +57,16 @@ function btnExplore(continentName) {
 const continent = localStorage.getItem("selectedContinent");
 
 async function getCountry(name) {
+  try{
   const response = await fetch (`https://restcountries.com/v3.1/name/${name}`)
   const data = await response.json();
   console.log(data);
   localStorage.setItem('selectedCountry', data[0].cca3);
   window.location.href = "country.html";
+  }
+  catch (error){
+    alert("País não encontrado.");
+  }
 
 }
 
