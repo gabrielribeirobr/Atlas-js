@@ -84,7 +84,7 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
   document.querySelector(".borders").textContent = "Não possui fronteiras";
 }
 
-    fetch("https://restcountries.com/v3.1/all?fields=name,flags,region")
+    fetch("https://restcountries.com/v3.1/all?fields=name,flags,region,cca3")
       .then((res) => res.json())
       .then((all) => {
         const suggestions = document.querySelector(".suggestions");
