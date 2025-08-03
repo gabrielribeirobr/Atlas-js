@@ -10,7 +10,7 @@ fetch("https://restcountries.com/v3.1/region/" + continent)
       card.className = `card-country col-sm-6`;
       card.innerHTML = `
         <img src="${country.flags.svg}" class="img-card" alt="${country.name.common}" />
-        <h2 class="teste2">${country.name.common}</h2>
+        <h3>${country.name.common}</h2>
       `;
       nameContinent.innerHTML = `${continent.toLocaleUpperCase()}`;
       card.onclick = () => {
