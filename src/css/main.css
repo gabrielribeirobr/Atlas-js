@@ -71,6 +71,7 @@ header p {
 }
 .hero .txtHero {
   color: #f8f8ec;
+  border: none;
 }
 
 .continent-card {
