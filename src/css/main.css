@@ -150,15 +150,6 @@ header p {
   object-fit: cover;
   display: block;
 }
-.card-country .teste2 {
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  line-clamp: 3;
-  -webkit-box-orient: vertical;
-  color: #f8f8ec;
-}
 
 img {
   object-fit: cover;
