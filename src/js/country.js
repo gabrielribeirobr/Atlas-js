@@ -51,9 +51,9 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
         <div class="borders">         
         </div>
       
-      <div class="suggestions">
-        <h2>Conheça também:</h2>
-      </div>
+      <h2>Conheça também:</h2>
+        <div class="suggestions">          
+        </div>
     `;
 
     if (country.borders?.length) {
@@ -104,8 +104,10 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
           const div = document.createElement("div");
           div.className = "card";
           div.innerHTML = `
+          <div class="card-borders">
+          <img src="${s.flags.svg}" alt="${s.name.common}" />
           <h3>${s.name.common}</h3>
-          <img src="${s.flags.svg}" alt="${s.name.common}" />`;
+          </div>`;
           div.onclick = () => {
             localStorage.setItem("selectedCountry", s.cca3);
             location.reload();
