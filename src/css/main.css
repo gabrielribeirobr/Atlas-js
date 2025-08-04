@@ -37,7 +37,6 @@ header {
   padding: 0 5px;
 }
 header p {
-  color: #f8f8ec;
   font-size: 32px;
   margin: 0;
 }
@@ -54,7 +53,6 @@ header p {
 }
 
 .iconSearch {
-  color: #f8f8ec;
   font-size: 24px;
   cursor: pointer;
 }
@@ -70,7 +68,6 @@ header p {
   padding-top: 4px;
 }
 .hero .txtHero {
-  color: #f8f8ec;
   border: none;
 }
 
@@ -84,7 +81,6 @@ header p {
   justify-content: space-between;
   margin-bottom: 2rem;
   border-radius: 12px;
-  color: #f8f8ec;
   position: relative;
 }
 .continent-card .about-continent {
@@ -100,7 +96,6 @@ header p {
   background-color: #0a5583;
   border-radius: 20px;
   border: 3px solid #aedd2b;
-  color: #ffffff;
   font-family: Arial, sans-serif;
   font-size: 17px;
   padding: 10px 20px;
@@ -131,7 +126,8 @@ header p {
   padding: 10px;
 }
 
-.card-country {
+.card-country,
+.card-borders {
   background-color: #066699;
   display: flex;
   width: 100%;
@@ -140,10 +136,14 @@ header p {
   border-radius: 4px;
   border: 3px solid transparent;
 }
-.card-country:hover {
+.card-country:hover,
+.card-borders:hover {
   border-color: #aedd2b;
 }
-.card-country .img-card {
+.card-country .img-card,
+.card-country img,
+.card-borders .img-card,
+.card-borders img {
   width: 100%;
   max-width: 202px;
   height: 100px;
@@ -194,51 +194,14 @@ h2 {
     height: 100%;
     object-fit: contain;
   }
-  .borders {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .card-borders {
-    background-color: #066699;
-    display: flex;
-    width: 200px;
-    height: 200px;
-    flex-direction: column;
-    border-radius: 4px;
-    border: 3px solid transparent;
-  }
-  .card-borders:hover {
-    border-color: #aedd2b;
-  }
-  .card-borders img {
-    width: 100%;
-    max-width: 202px;
-    height: 100px;
-    object-fit: cover;
-    display: block;
-  }
+  .borders,
   .suggestions {
     display: flex;
     justify-content: space-evenly;
   }
   .card-borders {
-    background-color: #066699;
-    display: flex;
     width: 200px;
     height: 200px;
-    flex-direction: column;
-    border-radius: 4px;
-    border: 3px solid transparent;
-  }
-  .card-borders:hover {
-    border-color: #aedd2b;
-  }
-  .card-borders img {
-    width: 100%;
-    max-width: 202px;
-    height: 100px;
-    object-fit: cover;
-    display: block;
   }
 }
 
