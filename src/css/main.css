@@ -196,6 +196,30 @@ h2 {
   }
   .borders {
     display: flex;
+    justify-content: space-evenly;
+  }
+  .card-borders {
+    background-color: #066699;
+    display: flex;
+    width: 200px;
+    height: 200px;
+    flex-direction: column;
+    border-radius: 4px;
+    border: 3px solid transparent;
+  }
+  .card-borders:hover {
+    border-color: #aedd2b;
+  }
+  .card-borders img {
+    width: 100%;
+    max-width: 202px;
+    height: 100px;
+    object-fit: cover;
+    display: block;
+  }
+  .suggestions {
+    display: flex;
+    justify-content: space-evenly;
   }
   .card-borders {
     background-color: #066699;
