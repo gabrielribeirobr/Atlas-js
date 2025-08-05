@@ -24,6 +24,10 @@ header {
     font-size: 32px;
     margin: 0;
   }
+
+  a{
+    text-decoration: none;
+  }
 }
 
 #textCountry {
@@ -158,7 +162,7 @@ img {
 }
 
 h2 {
-  border-bottom: 3px solid $secondary;
+  border-bottom: 3px solid $background;
   padding-bottom: 10px;
 }
 

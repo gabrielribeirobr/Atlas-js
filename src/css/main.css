@@ -40,6 +40,9 @@ header p {
   font-size: 32px;
   margin: 0;
 }
+header a {
+  text-decoration: none;
+}
 
 #textCountry {
   height: 32px;
@@ -168,7 +171,7 @@ img {
 }
 
 h2 {
-  border-bottom: 3px solid #0a5483;
+  border-bottom: 3px solid #02416d;
   padding-bottom: 10px;
 }
 
