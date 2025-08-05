@@ -121,8 +121,9 @@ header {
 .card-borders {
   background-color: $primary;
   display: flex;
-  width: 100%;
+  align-items: center;
   height: 200px;
+  width: 100%;
   flex-direction: column;
   border-radius: 4px;
   border: 3px solid transparent;
@@ -141,6 +142,16 @@ header {
   }
 }
 
+.card-borders{
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  height: 200px;
+  flex-direction: column;
+  border-radius: 4px;
+  border: 3px solid transparent;
+}
+
 img {
   object-fit: cover;
   width: 100%;
@@ -149,6 +160,22 @@ img {
 h2 {
   border-bottom: 3px solid $secondary;
   padding-bottom: 10px;
+}
+
+.borders,
+.suggestions {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+  }
+
+.country-details,
+.continent-countries,
+.wrap-continent{
+  background-color: $secondary;
+  border-radius: 4px;
+  padding: 0px 4px;
 }
 
 @media screen and (min-width: 768px) {
@@ -170,6 +197,13 @@ h2 {
       margin-top: 1rem;
     }
   }
+
+.card-borders {
+  background-color: transparent;
+  display: flex;
+  height: 200px;
+  flex-direction: column;
+ }
 
   .card-flag {
     width: 600px;
@@ -195,6 +229,7 @@ h2 {
   .suggestions {
     display: flex;
     justify-content: space-evenly;
+    flex-direction: row;
   }
 
   .card-borders {
