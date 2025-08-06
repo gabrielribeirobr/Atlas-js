@@ -3,7 +3,8 @@
 **Geo Atlas** is a front-end project that uses the [REST Countries API](https://restcountries.com/) to display geographical information about continents and their countries. It provides a clean, responsive, and interactive interface where users can explore countries by continent and view details like flags, currencies, and neighboring nations.
 
 ---
-
+🖥️ **Live Demo**: [Click here to open the Geo.Atlas](https://gabrielribeirobr.github.io/Atlas-js/)
+---
 ## 📸 Preview
 
 <table>
