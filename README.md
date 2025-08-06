@@ -51,7 +51,7 @@
 ┃ ┗ 📄 main.css / main.scss<br/>
 ┣ 📁 js<br/>
 ┃ ┣ 📄 index.js<br/>
-┃ ┃ 📄 country.js<br/>
+┃ ┣ 📄 country.js<br/>
 ┃ ┗ 📄 continent.js<br/>
 ┗ 📁 scss<br/>
 ┃  ┣ 📄 _variables.scss<br/>
