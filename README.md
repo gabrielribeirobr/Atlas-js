@@ -6,9 +6,19 @@
 
 ## 📸 Preview
 
-> *"../../public/img/continents/oceania.PNG"*
->  *(You can add a screenshot of the app here)*
-> 
+<table>
+  <tr>
+    <td valign="top">
+      <img src="https://github.com/gabrielribeirobr/Atlas-js/blob/main/public/img/screenshots/index.png" alt="index" width="100%"/>
+    </td>
+    <td valign="top">
+      <img src="https://github.com/gabrielribeirobr/Atlas-js/blob/main/public/img/screenshots/continents.png" alt="continent" width="100%"/>
+    </td>
+    <td valign="top">
+      <img src="https://github.com/gabrielribeirobr/Atlas-js/blob/main/public/img/screenshots/countries.png" alt="country" width="100%"/>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -35,26 +45,35 @@
 
 ## 📂 Folder Structure
 
-📁 src
-┣ 📁 css
-┃ ┗ 📄 main.css / main.scss
-┣ 📁 js
-┃ ┣ 📄 index.js
-┃ ┗ 📄 continent.js
-┗ 📁 img
-┗ 📄 (continent images, flags, etc.)
-📄 index.html
-📄 continent.html
+📁 src<br/>
+┣ 📁 css<br/>
+┃ ┗ 📄 main.css / main.scss<br/>
+┣ 📁 js<br/>
+┃ ┣ 📄 index.js<br/>
+┃ ┃ 📄 country.js
+┃ ┗ 📄 continent.js<br/>
+┗ 📁 scss<br/>
+┃  ┣ 📄 _variables.scss<br/>
+┃  ┗📄  main.scss<br/>
+📄 index.html<br/>
+📄 country.html<br/>
+📄 continent.html<br/>
 
-yaml
-Copiar
-Editar
 
----
 
-## 🔧 How to Use
+## 🚀 Getting Started
 
-1. Clone the repository:
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/geo-atlas.git
+git clone https://github.com/gabrielribeirobr/Atlas-js
+cd atlas
+```
+2. Install dependencies
+```bash
+npm install
+```
+3. Run project
+```bash
+npm start
+```
