@@ -7,6 +7,9 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
   .then((res) => res.json())
   .then((data) => {
     const country = data[0];
+    const { currencies } = country;
+    const [currencyCode] = Object.keys(currencies);
+    const { name: currencyName, symbol: currencySymbol } = currencies[currencyCode];
     container.innerHTML = `
     <h2>${country.name.common}</h2>
       <div class="card">
@@ -28,6 +31,7 @@ fetch(`https://restcountries.com/v3.1/alpha/${code}`)
                 <p><strong>Capital:</strong> ${
                   country.capital?.[0] || "Não possui"
                 }</p>
+                <p><strong>Moeda:</strong> (${currencyName}) <strong>Simbolo:</strong> (${currencySymbol})</p>
                 <p><strong>População:</strong> ${country.population.toLocaleString()}</p>
                 <p><strong>Região:</strong> ${country.region}</p>
                 <p><strong>Idioma:</strong> ${Object.values(
